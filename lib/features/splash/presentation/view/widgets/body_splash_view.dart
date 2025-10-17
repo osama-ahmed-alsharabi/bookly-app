@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/app_assets.dart';
+import 'package:bookly_app/features/splash/presentation/view/widgets/animated_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class BodySplashView extends StatelessWidget {
@@ -11,6 +12,7 @@ class BodySplashView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AppAssets.imagesBOOKLY),
+        const AnimatedTextWidget(),
       ],
     );
   }
