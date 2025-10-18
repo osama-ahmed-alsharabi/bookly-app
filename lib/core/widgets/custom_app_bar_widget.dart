@@ -10,11 +10,11 @@ class CustomAppBarWidget extends StatelessWidget {
       padding: EdgeInsetsGeometry.symmetric(horizontal: 16, vertical: 20),
       child: Row(
         children: [
-          Image.asset(AppAssets.imagesBOOKLY),
+          Image.asset(AppAssets.imagesBOOKLY , height: 24,),
           Spacer(),
           GestureDetector(
             onTap: () {},
-            child: Image.asset(AppAssets.imagesIcSearch),
+            child: Image.asset(AppAssets.imagesIcSearch , height: 24,),
           ),
         ],
       ),
