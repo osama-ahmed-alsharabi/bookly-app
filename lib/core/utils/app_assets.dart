@@ -3,5 +3,7 @@ class AppAssets {
   AppAssets._();
   
   static const String imagesBOOKLY = "assets/images/BOOKLY.png";
+
+  static const String imagesIcSearch = "assets/images/ic_search.png";
 }
 
