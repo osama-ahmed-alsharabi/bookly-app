@@ -5,5 +5,7 @@ class AppAssets {
   static const String imagesBOOKLY = "assets/images/BOOKLY.png";
 
   static const String imagesIcSearch = "assets/images/ic_search.png";
+
+  static const String imagesTestImage = "assets/images/test_image.png";
 }
 
