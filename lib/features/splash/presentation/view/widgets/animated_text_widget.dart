@@ -1,4 +1,7 @@
+import 'package:bookly_app/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/instance_manager.dart';
 
 class AnimatedTextWidget extends StatefulWidget {
   const AnimatedTextWidget({super.key});
@@ -14,15 +17,8 @@ class _AnimatedTextWidgetState extends State<AnimatedTextWidget>
   @override
   void initState() {
     super.initState();
-    animation = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1500),
-    );
-    slidingAnimation = Tween<Offset>(
-      begin: Offset(0, 3),
-      end: Offset(0, 0),
-    ).animate(animation);
-    animation.forward();
+    textAnimation();
+    navigateToHomeView();
   }
 
   @override
@@ -41,5 +37,27 @@ class _AnimatedTextWidgetState extends State<AnimatedTextWidget>
         textAlign: TextAlign.center,
       ),
     );
+  }
+
+  void navigateToHomeView() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(
+        () => HomeView(),
+        transition: Transition.fade,
+        duration: const Duration(milliseconds: 3000),
+      );
+    });
+  }
+
+  void textAnimation() {
+    animation = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    );
+    slidingAnimation = Tween<Offset>(
+      begin: Offset(0, 3),
+      end: Offset(0, 0),
+    ).animate(animation);
+    animation.forward();
   }
 }
