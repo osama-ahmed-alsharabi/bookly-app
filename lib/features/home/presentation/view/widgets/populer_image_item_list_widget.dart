@@ -6,18 +6,15 @@ class PopulerImageItemListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .3,
-      child: AspectRatio(
-        aspectRatio: 2.8 / 4,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage(AppAssets.imagesTestImage),
-            ),
+    return AspectRatio(
+      aspectRatio: 2.8 / 4,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage(AppAssets.imagesTestImage),
           ),
         ),
       ),
